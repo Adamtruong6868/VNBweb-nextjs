@@ -1,0 +1,45 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+	<title>alignedLayer</title>
+	<defs>
+		<linearGradient id="g1" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,1555.813,-246.1,0,599.985,-147.553)">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset=".485" stop-color="#18ff7f"/>
+			<stop offset="1" stop-color="#ffffff"/>
+		</linearGradient>
+		<linearGradient id="g2" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,1204.325,-190.5,0,460.793,-31.375)">
+			<stop offset="0" stop-color="#5c5c5c" stop-opacity="0"/>
+			<stop offset=".755" stop-color="#18ff7f" stop-opacity="1"/>
+			<stop offset="1" stop-color="#ffffff" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="g3" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,-879.959,139.192,0,739.179,1039.44)">
+			<stop offset="0" stop-color="#5c5c5c" stop-opacity="0"/>
+			<stop offset="1" stop-color="#18ff7f" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="g4" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,-879.959,139.192,0,739.179,1039.44)">
+			<stop offset="0" stop-color="#5c5c5c" stop-opacity="0"/>
+			<stop offset="1" stop-color="#18ff7f" stop-opacity="1"/>
+		</linearGradient>
+		<linearGradient id="g5" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0,246.011,-501.28,0,669.591,14.152)">
+			<stop offset="0" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#18ff7f"/>
+		</linearGradient>
+		<linearGradient id="g6" x2="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-9.986,-198.322,404.118,-20.348,543.858,1169.27)">
+			<stop offset=".031" stop-color="#ffffff"/>
+			<stop offset="1" stop-color="#18ff7f"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: url(#g2) } 
+		.s2 { fill: url(#g3) } 
+		.s3 { fill: url(#g4) } 
+		.s4 { fill: url(#g5) } 
+		.s5 { fill: url(#g6) } 
+	</style>
+	<path class="s0" d="m530.4 159.5l139.2 68.3v811.7l-139.2-68.4z"/>
+	<path class="s1" d="m530.4 159.5l-139.2 68.3v811.7l139.2-68.4z"/>
+	<path class="s2" d="m669.6 1039.4l139.2-68.3v-811.6l-139.2 68.3z"/>
+	<path class="s3" d="m669.6 1039.4l139.2-68.3v-811.6l-139.2 68.3z"/>
+	<path fill-rule="evenodd" class="s4" d="m530.4 159.5l139.2-68.3 139.2 68.3-139.2 68.3z"/>
+	<path fill-rule="evenodd" class="s5" d="m669.6 1039.4l-139.2 68.3-139.2-68.3 139.2-68.3z"/>
+</svg>
