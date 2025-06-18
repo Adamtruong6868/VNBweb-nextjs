@@ -1,0 +1,87 @@
+// src/components/MilestoneTimeline.jsx
+'use client'
+
+import React from 'react'
+
+const milestones = [
+  {
+    year: '2018',
+    title: 'Game Devs',
+    description: 'Talent Freelancers in Game Development using Roblox / Unity.',
+    bg: '/assets/timeline/gamepad.png'
+  },
+  {
+    year: '2020',
+    title: 'Researching',
+    description: 'Entered blockchain as researchers and early investors.',
+    bg: '/assets/timeline/blockchain.png'
+  },
+  {
+    year: '2021',
+    title: 'Validators Era',
+    description: 'Formed VNBnode and became trusted validators in blockchain projects.',
+    bg: '/assets/timeline/validator.png'
+  },
+  {
+    year: '2023',
+    title: 'GameFi Devs',
+    description: 'Built Unity-based games with blockchain/NFT features.',
+    bg: '/assets/timeline/gamefi.png'
+  },
+  {
+    year: '2024',
+    title: 'AI Integration',
+    description: 'AI integrated into solutions to meet custom business needs.',
+    bg: '/assets/timeline/ai.png'
+  },
+  {
+    year: '2025',
+    title: 'Full Solutions',
+    description: 'Merged with Nedy to provide full Web3 launch support.',
+    bg: '/assets/timeline/rocket.png'
+  }
+]
+
+export default function MilestoneTimeline() {
+  return (
+    <section className="py-12 overflow-x-auto">
+      <h2 className="text-center text-3xl font-bold text-white mb-10">
+        Our Journey
+      </h2>
+
+      <div className="flex flex-nowrap justify-center gap-4 max-w-7xl mx-auto px-2">
+        {milestones.map((item, index) => (
+          <div
+            key={index}
+            className="w-[160px] h-[240px] rounded-xl shadow-lg overflow-hidden relative bg-cover bg-center transition-transform transform hover:-translate-y-2 hover:scale-105 duration-300 group flex flex-col justify-between text-center p-3"
+            style={{
+              backgroundImage: `url(${item.bg})`,
+              backgroundSize: '100% 100%',
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center'
+            }}
+          >
+            {/* Title + Description */}
+            <div className="mt-6">
+              <div className="h-[30px] flex items-center justify-center">
+                <h4 className="text-sm font-bold text-gray-800 group-hover:text-blue-900 transition-colors duration-300 leading-tight text-center">
+                  {item.title}
+                </h4>
+              </div>
+              <div className="h-[40px] flex items-center justify-center mt-1">
+                <p className="text-[11px] text-gray-700 group-hover:text-blue-900 leading-tight px-1 text-center">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+
+            {/* Year pinned to bottom */}
+            <h4 className="text-xs font-bold text-gray-300 group-hover:text-blue-300 transition-colors duration-300 pt-1">
+              {item.year}
+            </h4>
+          </div>
+        ))}
+      </div>
+    </section>
+  )
+}

@@ -1,5 +1,6 @@
 import GalleryCard from '@/components/GalleryCard'
 import PartnersSection from '@/components/PartnersSection'
+import MilestoneTimeline from '@/components/MilestoneTimeline'
 
 export default function Home() {
   return (
@@ -60,6 +61,9 @@ export default function Home() {
           ]}
         />
       </section>
+
+      {/* Timeline Section */}
+      <MilestoneTimeline />
 
       {/* Partners Section */}
       <PartnersSection />

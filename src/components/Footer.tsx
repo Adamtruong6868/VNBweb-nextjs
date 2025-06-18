@@ -20,6 +20,8 @@ export default function Footer() {
           <Image
             src="/assets/smalllogo.png"
             alt="VNB Logo"
+            width={40} // ✅ Added
+            height={40} // ✅ Added
             className="w-10 h-10"
             style={{
               animation: 'rotate3dLogo 20s linear infinite',
@@ -28,19 +30,44 @@ export default function Footer() {
           />
           <div className="flex gap-3">
             <a href="https://t.me/Vnbnode" target="_blank" rel="noopener noreferrer">
-              <Image src="/assets/socials/telegram.svg" alt="Telegram" className="w-5 h-5" />
+              <Image
+                src="/assets/socials/telegram.svg"
+                alt="Telegram"
+                width={20}
+                height={20}
+              />
             </a>
             <a href="https://discord.gg/g3AbxxkCGa" target="_blank" rel="noopener noreferrer">
-              <Image src="/assets/socials/discord.svg" alt="Discord" className="w-5 h-5" />
+              <Image
+                src="/assets/socials/discord.svg"
+                alt="Discord"
+                width={20}
+                height={20}
+              />
             </a>
             <a href="https://facebook.com/VNBnode" target="_blank" rel="noopener noreferrer">
-              <Image src="/assets/socials/facebook.svg" alt="Facebook" className="w-5 h-5" />
+              <Image
+                src="/assets/socials/facebook.svg"
+                alt="Facebook"
+                width={20}
+                height={20}
+              />
             </a>
             <a href="https://x.com/vnbnode" target="_blank" rel="noopener noreferrer">
-              <Image src="/assets/socials/x.svg" alt="Twitter" className="w-5 h-5" />
+              <Image
+                src="/assets/socials/x.svg"
+                alt="Twitter"
+                width={20}
+                height={20}
+              />
             </a>
             <a href="https://github.com/vnbnode" target="_blank" rel="noopener noreferrer">
-              <Image src="/assets/socials/github.svg" alt="GitHub" className="w-5 h-5" />
+              <Image
+                src="/assets/socials/github.svg"
+                alt="GitHub"
+                width={20}
+                height={20}
+              />
             </a>
           </div>
         </div>

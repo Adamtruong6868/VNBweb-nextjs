@@ -25,12 +25,14 @@ export default function PartnersSection() {
         {partners.map((partner, i) => (
           <div
             key={i}
-            className="w-36 h-20 flex items-center justify-center bg-white/3 rounded-lg backdrop-blur"
+            className="w-36 h-20 flex items-center justify-center bg-white/5 rounded-lg backdrop-blur"
           >
             <Image
               src={partner.logo}
               alt={partner.name}
-              className="h-12 object-contain"
+              width={100} // ✅ Added
+              height={48} // ✅ Added
+              className="object-contain"
             />
           </div>
         ))}
