@@ -10,7 +10,7 @@ export default function Header() {
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/assets/smalllogo.svg"
+            src="/assets/smalllogo.png"
             alt="VNB Logo"
             width={40} // ✅ Required
             height={40} // ✅ Required
