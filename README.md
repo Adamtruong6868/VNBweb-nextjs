@@ -56,29 +56,47 @@ Make sure these lines are set:
 #### PermitRootLogin no
 #### PasswordAuthentication no
 #### PubkeyAuthentication yes
-
+Enable firewall
+```
+ufw default deny incoming
+ufw default allow outgoing
+ufw allow 22
+ufw allow 80
+ufw allow 443
+ufw enable
+ufw status
+```
+Enable fail2ban
+```
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+```
 ## 1. Install Node.js, git, nginx
 
-```sudo apt update
-sudo apt install -y curl git nginx
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+```sudo curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
+sudo npm install -g pm2
+```
+```
 node -v
 npm -v
-```
-```
-sudo npm install -g pm2
+pm2 -v
 ```
 ## 2. Clone your GitHub project
 ```
-cd /var/www
+mkdir -p /home/deploy/website
+cd /deploy/website
 sudo git clone https://github.com/Adamtruong6868/VNBweb-nextjs.git vnbnode
-sudo chown -R $USER:$USER /var/www/vnbnode
-cd /var/www/vnbnode
+sudo chown -R $USER:$USER vnbnode
+cd /deploy/website/vnbnode
+```
+Protect env file
+```
+chmod 600 .env.local
 ```
 ## 3. Install dependencies
 ```
-npm install
+npm install --ignore-scripts
 ```
 ## 4. Build the Next.js app
 ```
@@ -145,7 +163,13 @@ Issue certificate:
 ```
 sudo certbot --nginx -d vnbnode.com -d www.vnbnode.com
 ```
-
+## 9. Final security checks
+```
+sudo ss -tulnp
+sudo systemctl status fail2ban
+sudo ufw status
+pm2 status
+```
 ## Future update flow, When you change code on GitHub:
 ```
 cd /var/www/vnbnode
