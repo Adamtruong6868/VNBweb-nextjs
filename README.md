@@ -1,4 +1,62 @@
-# Getting Started
+# 0. Before touching the new VPS
+Do this first on your own computer.
+```
+ssh-keygen -t ed25519 -C "deploy-vps"
+```
+This creates:
+private key: ~/.ssh/id_ed25519
+public key: ~/.ssh/id_ed25519.pub
+Show your public key:
+```
+cat ~/.ssh/id_ed25519.pub
+```
+Show your private key:
+```
+cat ~/.ssh/id_ed25519
+```
+save it in save place on your PC.
+## Login to the new VPS as root the first time
+```
+ssh root@YOUR_SERVER_IP
+```
+Then update system:
+```
+apt update && apt upgrade -y
+```
+Install basic tools:
+```
+apt install -y curl git ufw fail2ban nginx
+```
+Create a non-root deploy user
+```
+adduser deploy
+usermod -aG sudo deploy
+```
+Create SSH folder for deploy user & Paste your public key from your PC into that file.:
+```
+mkdir -p /home/deploy/.ssh
+nano /home/deploy/.ssh/authorized_keys
+```
+Paste your public key from your PC into that file.
+```
+chmod 700 /home/deploy/.ssh
+chmod 600 /home/deploy/.ssh/authorized_keys
+chown -R deploy:deploy /home/deploy/.ssh
+```
+Test login as deploy user before changing SSH settings
+```
+ssh deploy@YOUR_SERVER_IP
+```
+Harden SSH immediately
+```
+sudo nano /etc/ssh/sshd_config
+```
+Make sure these lines are set:
+
+#### PermitRootLogin no
+#### PasswordAuthentication no
+#### PubkeyAuthentication yes
+
 ## 1. Install Node.js, git, nginx
 
 ```sudo apt update
